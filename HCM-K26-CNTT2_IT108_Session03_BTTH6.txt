@@ -1,0 +1,43 @@
+Bài 6 : Thiết kế hệ thống ứng dụng theo mô hình DIKW và quản lý tệp cấu hình
+Cách tránh bẫy dữ liệu:
+Bẫy 1:
+bật Hidden item để tránh xóa file.env khi dọn dẹp
+Bẫy 2:
+1 giao dịch 1 KB , 1 ngày 1 triệu giao dịch = 1000000 KB
+Đổi sang MB: 1000000 KB chia 1024 MB = 976.56 MB
+Cần trên 976 MB là 1 GB để lưu trữ mỗi ngày
+
+Mô tả chi tiết 4 tầng DIKW của MoMo-Lite:
+- Data (Dữ liệu thô):
+Input (đầu vào):
+ứng dụng nhận yêu cầu dữ liệu thô từ người dùng ví dụ như: ID tên khách hàng:123xxx , số điện thoại:xxxxx ,số tiền hiện tại: 1500000 VNĐ ,thời gian gửi: 12h00, tổng số tiền chuyển khoản tháng này: 2000000 VNĐ, tổng thu nhập: 3500000
+Process (Xử lý):
+xác nhận tính hợp lệ, qua .env mật khẩu để xác định người dùng
+Output (Đầu ra):
+dựa trên Nhật ký giao dịch thô
+- Information (thông tin):
+Input(đầu vào):
+nhận dữ liệu từ data,và xác định thời gian hiện tại 
+Process (Xử lý):
+Tính tổng, tính phần trăm theo danh mục.
+Output (Đầu ra):
+Báo cáo tổng chi tiêu tháng theo biểu đồ
+ví dụ: nửa tháng 4 này người dùng chi tiêu đến 2000000 = 57% tổng thu nhập, tăng 3% so với tháng 3 là 54%
+- Knowledge (Tri thức):
+Dựa vào ngân sách chi tiêu của người dùng
+Process (Xử lý):
+so sánh số liệu, dự đoán người dùng chi tiêu
+Output (Đầu ra):
+Đưa ra thông báo cảnh báo
+ví dụ:
+Hệ thống nhận diện ngân sách sử dụng tiền ở mức không ổn định và đưa ra thông báo chi tiêu :"người dùng đang chi tiêu không ổn định, có nguy cơ không đủ tiền vào cuối tháng
+- Wisdom (Trí tuệ):
+Input(đầu vào):
+Lịch sử hành vi chi tiêu dài hạn của người dùng
+Process (Xử lý):
+hệ thống AI dựa trên dữ liệu đã học sẽ chạy chương trình logic và phân tích chiến lược chi tiêu hợp lý.
+Output (Đầu ra):
+Thông báo đưa ra kết quả chi tiêu hợp lý
+Đưa ra định hướng chiến lược, giải pháp tối ưu:
+ví dụ: dựa trên hành vi người dùng thích uống trà sữa mỗi ngày,mua đồ ăn vặt, mất khoảng 700000 VNĐ mỗi tháng,ứng dụng sẽ đề xuất giảm uống trà sữa chỉ nên uống vào cuối tuần, đồ ăn vặt không quá 20000 VNĐ trong 1 ngày.
+
