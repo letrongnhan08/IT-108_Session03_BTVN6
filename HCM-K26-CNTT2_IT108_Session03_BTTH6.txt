@@ -12,9 +12,9 @@ Mô tả chi tiết 4 tầng DIKW của MoMo-Lite:
 Input (đầu vào):
 ứng dụng nhận yêu cầu dữ liệu thô từ người dùng ví dụ như: ID tên khách hàng:123xxx , số điện thoại:xxxxx ,số tiền hiện tại: 1500000 VNĐ ,thời gian gửi: 12h00, tổng số tiền chuyển khoản tháng này: 2000000 VNĐ, tổng thu nhập: 3500000
 Process (Xử lý):
-xác nhận tính hợp lệ, qua .env mật khẩu để xác định người dùng
+xác nhận tính hợp lệ, qua mật khẩu hoặc nhận diện khuôn mặt để xác định người dùng
 Output (Đầu ra):
-dựa trên Nhật ký giao dịch thô
+dựa trên Nhật ký giao dịch thô đã lưu trữ
 - Information (thông tin):
 Input(đầu vào):
 nhận dữ liệu từ data,và xác định thời gian hiện tại 
